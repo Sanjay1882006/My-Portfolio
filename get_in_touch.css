@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(#8F87F1,#C68EFD);
+}
+
+.contact-container {
+    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title h2 {
+    font-weight: 600;
+    color: #ac00e6;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #ac00e6;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-weight: 500;
+    padding-left: 25px;
+    color: #f388f5c5;
+    font-size: 17px;
+}
+
+.contact-left textarea {
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus {
+    border: 2px solid #ec06f4;
+}
+
+label {
+    color: #bf01fe;
+}
+
+.input-box {
+    position: relative;
+}
+
+.lab {
+    position: absolute;
+    transform: translate(-24.3rem,0.9rem);
+    transition: 0.3s
+}
+
+.contact-inputs:hover + .lab,
+.contact-inputs:focus + .lab,
+.contact-inputs:not(:placeholder-shown) + .lab {
+    position: absolute;
+    transform: translate(-24rem,-0.5rem);
+    /* font-size: 14px; */
+    background-color: #bf01fe;
+    border-radius: 30px;
+    color: #fff;
+    padding: 0 10px;
+}
+
+
+
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg,#f388f5c5,#bf01fe);
+    cursor: pointer;
+}
+
+.marg {
+    font-size: 20px;
+    margin-left: -7px;
+}
+
+
+
+.contact-right img {
+    width: 700px;
+}
+
+.but {
+    width: 16rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.but button:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width:800px) {
+    .contact-inputs{
+        width: 80vw;
+    }
+    .contact-right {
+        display: none;
+    }
+
+    .lab {
+    position: absolute;
+    transform: translate(-17.5rem,0.9rem);
+    transition: 0.3s
+    }
+
+    .contact-inputs:hover + .lab,
+    .contact-inputs:focus + .lab,
+    .contact-inputs:not(:placeholder-shown) + .lab {
+        position: absolute;
+        transform: translate(-17rem,-0.5rem);
+        background-color: #bf01fe;
+        border-radius: 30px;
+        color: #fff;
+        padding: 0 10px;
+    }
+}
+
